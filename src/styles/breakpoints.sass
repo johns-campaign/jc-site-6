@@ -1,0 +1,42 @@
+$s-or-more: 576px
+$m-or-more: 768px
+$l-or-more: 992px
+$xl-or-more: 1200px
+
+@media (min-width: $s-or-more)
+  .xs
+    display: none !important
+
+@media not (min-width: $s-or-more)
+  .s,
+  .s-or-more
+    display: none !important
+
+@media (min-width: $m-or-more)
+  .s,
+  .s-or-less
+    display: none !important
+
+@media not (min-width: $m-or-more)
+  .m,
+  .m-or-more
+    display: none !important
+
+@media (min-width: $l-or-more)
+  .m,
+  .m-or-less
+    display: none !important
+
+@media not (min-width: $l-or-more)
+  .l,
+  .l-or-more
+    display: none !important
+
+@media (min-width: $xl-or-more)
+  .l,
+  .l-or-less
+    display: none !important
+
+@media not (min-width: $xl-or-more)
+  .xl
+    display: none !important

@@ -1,0 +1,208 @@
+@use './breakpoints' as *
+@use './colours' as *
+@use './fonts' as *
+@use './gaps' as *
+
+*,
+button,
+input[type]
+  border-color: $blue
+  border-width: 2px
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  background: $bg-colour
+  color: $fg-colour
+  font-family: $body-font
+  font-size: $body-font-size
+  font-weight: normal
+  line-height: 1.5
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: $heading-font
+  font-weight: 600
+  line-height: 1
+  margin-block-start: $m-gap
+  margin-block-end: $s-gap
+
+h1
+  font-size: $h1-font-size
+
+h2
+  font-size: $h2-font-size
+
+h3
+  font-size: $h3-font-size
+
+h4
+  font-size: $h4-font-size
+
+h5
+  font-size: $h5-font-size
+
+h6
+  font-size: $h6-font-size
+
+h1 + h1,
+h2 + h2,
+h3 + h3,
+h4 + h4,
+h5 + h5,
+h6 + h6
+  margin-block-start: $s-gap
+
+p
+  text-align: justify
+  margin-block-end: $s-gap
+
+ul:not(.unstyled)
+  list-style: circle outside
+
+ol:not(.unstyled)
+  list-style: decimal outside
+  ol
+    list-style-type: lower-latin
+    ol
+      list-style-type: lower-roman
+
+ul:not(.unstyled),
+ol:not(.unstyled)
+  &:not(.right-of-float)
+    padding-inline-start: 30px
+  &.right-of-float
+    & > li
+      position: relative
+      inset-inline-start: 30px
+      padding-inline-end: 30px
+    &.and-left-of-float > li
+      column-span: all
+  & > li
+    margin: 1em 0
+  &,
+  & > li,
+  & > li > p
+    text-align: start
+
+ul.unstyled,
+ol.unstyled
+  list-style: none
+  padding-inline-start: 0
+  & > li
+    margin-block: 0
+
+a
+  /* 50% would be nice if not for multiline links */
+  --a-background-position-x: 0%
+  --a-background-position-y: 100%
+  --a-background-size-y: 2px
+
+a
+  background-color: transparent
+  color: inherit
+  cursor: pointer
+  font-weight: bold
+  text-decoration: none
+  transition: background-size 450ms, text-shadow 450ms step-end
+  transition-delay: 50ms
+  background-image: linear-gradient(currentColor, currentColor)
+  background-position: var(--a-background-position-x) var(--a-background-position-y)
+  background-repeat: no-repeat
+  background-size: 0% var(--a-background-size-y)
+
+a:hover
+  transition-duration: 450ms, 0ms
+  text-shadow: -1px -1px 0 $bg-colour, 1px -1px 0 $bg-colour, -1px  1px 0 $bg-colour, 1px  1px 0 $bg-colour
+  background-size: 100% var(--a-background-size-y)
+
+h1 a
+  --a-background-position-y: 90%
+
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a
+  --a-background-position-y: 95%
+
+h1 a,
+h2 a
+  --a-background-size-y: 2.5px
+
+button,
+input,
+optgroup,
+select,
+textarea
+  font-family: inherit
+  font-size: 100%
+  line-height: 1.15
+  margin: 0
+
+button,
+input[type=button],
+input[type=submit]
+  background: none
+  border-style: solid
+  cursor: pointer
+  font-family: $button-font
+  font-size: $button-font-size
+  line-height: inherit
+  margin-block-end: $s-gap
+  padding: $xs-gap $s-gap
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover
+  background: $blue
+  color: $white
+
+figure
+  img
+    width: 100%
+    height: auto
+  figcaption
+    font-size: smaller
+    text-align: center
+  width: 100%
+  figcaption
+    &, p
+      text-align: start
+  @media (min-width: $s-or-more)
+    width: 200px
+    margin-block-end: $s-gap
+    // can't use `float: inline-{start,end}`...
+    &:not(.right)
+      margin-right: $m-gap
+      float: left
+      figcaption
+        &, p
+          text-align: left
+    &.right
+      margin-left: $m-gap
+      float: right
+      figcaption
+        &, p
+          text-align: right
+
+.clear-before::before,
+.clear-after::after
+  content: ''
+  display: table
+  clear: both
+
+.top
+  margin-block-start: 0
+
+// .twitter-timeline
+//   // min-height: 400px
+//   iframe
+//     border-width: 0
+//   &, iframe
+//     max-height: 100%
