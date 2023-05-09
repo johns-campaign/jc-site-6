@@ -4,16 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite build && vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
     "fix": "eslint . --fix",
-    "deploy": "pnpm run build && firebase deploy --only hosting",
+    "deploy": "vite build && firebase deploy --only hosting",
     "deploy-functions": "firebase deploy --only functions",
-    "deploy-all": "pnpm run build && firebase deploy"
+    "deploy-all": "vite build && firebase deploy"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
