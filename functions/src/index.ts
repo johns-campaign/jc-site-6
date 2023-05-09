@@ -21,11 +21,11 @@ exports.storageAccess = functions.https.onRequest((request, response) => {
   const filePath = requestPath.slice(1)
   const file =
     filePath.startsWith("images/") &&
-    oldExperienceImages.includes(filePath.slice("images/".length))
-      ? `images/experiences/${filePath.slice("images/".length).toLowerCase()}`
-      : filePath.startsWith("images/observer-articles/")
-      ? `images/articles/${filePath.slice("images/observer-articles/".length)}`
-      : filePath
+    oldExperienceImages.includes(filePath.slice("images/".length)) ?
+      `images/experiences/${filePath.slice("images/".length).toLowerCase()}` :
+      filePath.startsWith("images/observer-articles/") ?
+      `images/articles/${filePath.slice("images/observer-articles/".length)}` :
+      filePath
   const object = encodeURIComponent(file)
   const storagePath = `https://firebasestorage.googleapis.com/v0/b/johns-campaign-site.appspot.com/o/${object}?alt=media`
   response.redirect(storagePath)
@@ -34,13 +34,13 @@ exports.storageAccess = functions.https.onRequest((request, response) => {
 exports.storageList = functions.https.onRequest((request, response) => {
   const prefix = request.path.slice("/list/".length)
   admin
-    .storage()
-    .bucket()
-    .getFiles({prefix})
-    .then((files) => files[0].map((file) => file.name))
-    .then((files) => {
-      response.json(files)
-      return
-    })
-    .catch((error) => console.error(error))
+      .storage()
+      .bucket()
+      .getFiles({prefix})
+      .then((files) => files[0].map((file) => file.name))
+      .then((files) => {
+        response.json(files)
+        return
+      })
+      .catch((error) => console.error(error))
 })
