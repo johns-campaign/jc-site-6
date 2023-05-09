@@ -98,8 +98,6 @@ ol.unstyled
     margin-block: 0
 
 a
-  /* 50% would be nice if not for multiline links */
-  --a-background-position-x: 0%
   --a-background-position-y: 100%
   --a-background-size-y: 2px
 
@@ -112,28 +110,29 @@ a
   transition: background-size 450ms, text-shadow 450ms step-end
   transition-delay: 50ms
   background-image: linear-gradient(currentColor, currentColor)
-  background-position: var(--a-background-position-x) var(--a-background-position-y)
+  background-position: 0% 100%
   background-repeat: no-repeat
-  background-size: 0% var(--a-background-size-y)
-
-a:hover
-  transition-duration: 450ms, 0ms
-  text-shadow: -1px -1px 0 $bg-colour, 1px -1px 0 $bg-colour, -1px  1px 0 $bg-colour, 1px  1px 0 $bg-colour
-  background-size: 100% var(--a-background-size-y)
+  background-size: 0% 2px
+  &:hover
+    transition-duration: 450ms, 0ms
+    text-shadow: -1px -1px 0 $bg-colour, 1px -1px 0 $bg-colour, -1px  1px 0 $bg-colour, 1px  1px 0 $bg-colour
+    background-size: 100% 2px
 
 h1 a
-  --a-background-position-y: 90%
+  background-position: 0% 90%
 
 h2 a,
 h3 a,
 h4 a,
 h5 a,
 h6 a
-  --a-background-position-y: 95%
+  background-position: 0% 95%
 
 h1 a,
 h2 a
-  --a-background-size-y: 2.5px
+  background-size: 0% 2.5px
+  &:hover
+    background-size: 100% 2.5px
 
 button,
 input,

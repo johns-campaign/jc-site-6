@@ -191,9 +191,3 @@
   We are unrepayably indebted to all those who have helped us and carried the
   torch of change, of civil liberties, of common sense, of human rights.
 </p>
-
-<!-- <style>
-figure {
-  --figure-side: right;
-}
-</style> -->

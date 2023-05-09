@@ -42,8 +42,10 @@ h1
   align-self: end
 
 h1 a
-  --a-background-position-y: 87.5%
-  --a-background-size-y: 3px
+  background-position: 0% 87.5%
+  background-size: 0% 3px
+  &:hover
+    background-size: 100% 3px
 
 h2
   font-size: 13.8pt
