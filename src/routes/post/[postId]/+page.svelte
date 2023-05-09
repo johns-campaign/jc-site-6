@@ -18,7 +18,7 @@
 
   <PostFigure {post} />
   <h1 class="top">
-    <ThisLink>Post</ThisLink>
+    <ThisLink>{post.title}</ThisLink>
   </h1>
   <PostAuthorsAndDate {post} level={2} />
   <PostTags {post} />
