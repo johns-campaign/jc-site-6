@@ -1,20 +1,9 @@
-<script>
-  import ExternalLink from "$lib/links/ExternalLink.svelte"
-</script>
-
 <div class="latest">
-  Preliminary hearings for the
-  <ExternalLink href="https://covid19.public-inquiry.uk/">
-    Covid Inquiry</ExternalLink>
-  are underway for modules 2 & 3. As Ymgyrch John we are Core Participants in Module
-  2b which examines policy making in Wales. We work together with the
-  <ExternalLink href="https://www.relres.org/">
-    Relatives & Residents Association</ExternalLink>
-  and the
-  <ExternalLink href="https://www.patients-association.org.uk/">
-    Patients Association</ExternalLink>
-  for Module 3, examining the impact on healthcare systems. Our focus throughout
-  is on people.
+  On Tuesday June 6th we'll once again be meeting MPs to make real progress
+  towards a new law to ensure that every one has the right to a care supporter
+  (or care partner) wherever they are in the health and care system. Dan Carden
+  (Lab) will present this as a Ten Minute Rule Bill, supported by Tracy Crouch
+  (Con), Daisy Cooper (Lib Dem) and Liz Saville-Roberts (Plaid Cymru).
 </div>
 
 <style lang="sass">
