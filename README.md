@@ -4,9 +4,12 @@ _for the right to stay with people with dementia_
 
 _for the right of people with dementia to be supported by their family carers_
 
-## A note on deployment
+## A note or two on deployment
 
 Currently deploying with `firebase-tools@11.17.0` because of [`firebase-tools#5482`](https://github.com/firebase/firebase-tools/issues/5482).
+
+Currently using Node.js v16, as Firebase Functions doesn't support v18 yet.
+(Specifically, `@16.20.0`.)
 
 ## A few notes on the website's major iterations
 
