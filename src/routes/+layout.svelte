@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
   import MainNav from "$lib/navs/MainNav.svelte"
   import SocialsNav from "$lib/navs/SocialsNav.svelte"
   import "$styles/app.sass"
   import Footer from "./Footer.svelte"
   import Header from "./Header.svelte"
   import Latest from "./Latest.svelte"
-  import TwitterTimeline from "./TwitterTimeline.svelte"
+  // import TwitterTimeline from "./TwitterTimeline.svelte"
 </script>
 
 <div class="container">
@@ -28,7 +28,7 @@
     <div class="sidebar">
       <MainNav />
       <SocialsNav />
-      <TwitterTimeline />
+      <!-- <TwitterTimeline /> -->
     </div>
   </div>
   <Footer />
