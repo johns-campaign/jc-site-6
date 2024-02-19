@@ -1,19 +1,15 @@
 <script>
   import ExternalLink from "$lib/links/ExternalLink.svelte"
-  import YouTubeVideoLink from "$lib/links/socials/YouTubeVideoLink.svelte"
+  // import YouTubeVideoLink from "$lib/links/socials/YouTubeVideoLink.svelte"
 </script>
 
 <div class="latest">
-  We're delighted to report that the Right to a Care Supporter Bill presented by
-  Dan Carden on June 6 was accepted. The second reading is scheduled for
-  November 24.
-  <ExternalLink
-    href="https://hansard.parliament.uk/commons/2023-06-06/debates/26AF1B7E-0BCC-4490-9721-435E3029AFB6/CareSupporters">
-    Read the Hansard report here</ExternalLink>
-  or
-  <YouTubeVideoLink id="N0Zl2y4M5aw">
-    watch Dan's speech on YouTube</YouTubeVideoLink
-  >.
+  On Monday December 18th Helen Whately, Minister of State at the DHSC, laid an
+  amendment to the 2008 Health and Care Act before Parliament. From April 2024
+  visiting will become a Fundamental Standard in care homes, hospitals and
+  hospices.
+  <ExternalLink href="https://www.legislation.gov.uk/uksi/2023/1402/made"
+    >Read the amendment here.</ExternalLink>
 </div>
 
 <style lang="sass">
