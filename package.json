@@ -10,7 +10,8 @@
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
     "fix": "eslint . --fix",
-    "deploy": "vite build && firebase deploy"
+    "deploy": "vite build && firebase deploy",
+    "just-deploy": "firebase deploy"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
