@@ -32,11 +32,6 @@
       </h2>
     </FirestoreDocument>
   {/if}
-  {#if ambassador.place}
-    <h2>
-      {ambassador.place}
-    </h2>
-  {/if}
   <AmbassadorPlace {ambassador} level={2} />
   <AmbassadorContent {ambassador} />
   <AmbassadorMore {ambassador} />
