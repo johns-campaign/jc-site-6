@@ -1,20 +1,11 @@
-// import adapter from "@sveltejs/adapter-auto"
-import adapter from "sveltekit-adapter-firebase"
+import adapter from "@sveltejs/adapter-node"
 import autoprefixer from "autoprefixer"
 import preprocess from "svelte-preprocess"
 
 /** @type {import("@sveltejs/kit").Config} */
 const config = {
   kit: {
-    adapter: adapter({
-      nodeVersion: "16",
-      version: "v2",
-      functionOptions: {
-        cpu: 1,
-        memory: "512MiB",
-        maxInstances: 10,
-      },
-    }),
+    adapter: adapter(),
     alias: {
       $styles: "src/styles",
     },
