@@ -4,12 +4,13 @@
 </script>
 
 <div class="latest">
-  On Monday December 18th Helen Whately, Minister of State at the DHSC, laid an
-  amendment to the 2008 Health and Care Act before Parliament. From April 2024
-  visiting will become a Fundamental Standard in care homes, hospitals and
-  hospices.
-  <ExternalLink href="https://www.legislation.gov.uk/uksi/2023/1402/made"
-    >Read the amendment here.</ExternalLink>
+  Johns Campaign and Care Rights UK are core participants in module 2b of the
+  Covid Inquiry. Public Hearings began in Cardiff on Tuesday February 27th and
+  will run until March 14th 2024. This module examines core decision making by
+  the Welsh government. You can follow on YouTube or catch up with the Inquiry
+  via daily transcripts.
+  <ExternalLink href="https://www.youtube.com/watch?v=CDJA1p5OI7Q&t=1460"
+    >Here's our counsel's opening statement.</ExternalLink>
 </div>
 
 <style lang="sass">
